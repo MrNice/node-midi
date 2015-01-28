@@ -16,7 +16,7 @@ midi.createReadStream = function(input) {
 
   input.on('message', function(deltaTime, message) {
 
-    var packet = (message.toString + '\n');
+    var packet = (message.toString() + '\n');
 
     if (!stream.paused) {
       stream.emit('data', packet);
